@@ -1,5 +1,7 @@
+//requires the mongoose package
 const {Schema, model} = require('mongoose');
 
+//This  variable defines the reaction schema.
 const reactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
@@ -24,4 +26,5 @@ const reactionSchema = new Schema({
     }
 );
 
+//This exports the reaction model.
 module.exports = reactionSchema;

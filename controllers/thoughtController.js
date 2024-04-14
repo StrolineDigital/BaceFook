@@ -1,6 +1,8 @@
+//This variable block requires the Thought, User, and Reaction models and the Types object from Mongoose.
 const { Thought, User, Reaction } = require('../models');
 const { Types } = require('mongoose');
 
+//This function requires all thoughts to be found and returned in JSON format.
 const thoughtController = {
     async getAllThoughts(req, res) {
         try {
@@ -12,6 +14,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a single thought to be found by its ID and returned in JSON format.
     async getThoughtById({ params }, res) {
         try {
             const thought = await Thought.findOne({ _id: params.id });
@@ -26,6 +29,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a new thought to be created and returned in JSON format.
     async createThought(req, res) {
         try {
             const thought = await Thought.create(req.body);
@@ -41,6 +45,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a thought to be deleted by its ID.
     async deleteThought(req, res) {
         try {
             const thought = await Thought.findOneAndDelete({ _id: req.params.id });
@@ -59,6 +64,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a thought to be updated by its ID.
     async updateThoughtById(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true });
@@ -73,6 +79,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a reaction to be created and returned in JSON format.
     async createReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
@@ -91,6 +98,7 @@ const thoughtController = {
         }
     },
 
+    // This function requires a reaction to be deleted by its ID.
     async deleteReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
@@ -110,4 +118,5 @@ const thoughtController = {
     }
 };
 
+//This exports the thoughtController object.
 module.exports = thoughtController;
