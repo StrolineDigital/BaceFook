@@ -1,6 +1,7 @@
 //requires the mongoose package
 const {Schema, model} = require('mongoose');
 //Defines the user schema
+const friendSchema = require ('./friends');
 const userSchema = new Schema({
     username: {
         type: String,
@@ -27,10 +28,7 @@ const userSchema = new Schema({
         }
     ],
     friends: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        },
+        friendSchema
     ],
 },
 });

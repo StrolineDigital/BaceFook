@@ -7,7 +7,7 @@ const {getAllThoughts,
     updateThoughtById, 
     deleteThought, 
     createReaction, 
-    deleteReaction} = require('../../controllers/thought-controller');
+    deleteReaction} = require('../../controllers/thoughtController');
     const {create}=require('../../models/user');
 
     //Set up the routes for the thoughts

@@ -1,5 +1,5 @@
 //requires the mongoose package
-const {Schema, model} = require('mongoose');
+const {Schema, model,Types} = require('mongoose');
 
 //This  variable defines the reaction schema.
 const reactionSchema = new Schema({
