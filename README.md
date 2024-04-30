@@ -4,7 +4,7 @@
   This project is designed to demonstrate a proof of concept of the backend of a social media platform known as BaceFook. The platform uses mongoose to get information from a MongoDB database on users, thoughts, and reactions. This is a NOSQL platform meaning that a typical seeds and schema.sql template does not need to be used to make this project work. 
 
   ## Link To The Demo Video
-  
+  https://drive.google.com/file/d/1pHWOHZs6ovfhYr2sO6bwC_RITmzMKt7D/view
   
    ## Installation
    Before you begin, Make sure you already have node.js (install instructions can be found here ) and MongoDB (install instructions can be found here ) installed and running on your local machine. The User then must clone the repository and navigate to the root directory using the bash terminal (command is "cd BaceFook"). The user then runs the command "npm i" or "npm install" whichever is preferred, to download the required node modules for the application to function. The user can then populate a MongoDB database with their own data, and change the path found in config/connections.js to the correct name of their database so that it can be accessed by the application. 
